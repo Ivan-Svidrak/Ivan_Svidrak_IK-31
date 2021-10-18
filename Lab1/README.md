@@ -23,5 +23,4 @@ git log
 ```
 6. Конфлікт виник оскільки в обох файлах була різна інфорація на одній і тій же стрічці, довелось редагувати вручну, щоб інформація була спільна
 7. ЩОб синхронізувати, потрібно використат команду git pull
-8. 
-![Screenshot](https://github.com/Ivan-Svidrak/Ivan_Svidrak_IK-31/blob/main/Lab1/Screenshot_1.png "Screenshot
+8. ![Screenshot_1.](https://github.com/Ivan-Svidrak/Ivan_Svidrak_IK-31/blob/main/Lab1/Screenshot_1.png "Screenshot_1")
