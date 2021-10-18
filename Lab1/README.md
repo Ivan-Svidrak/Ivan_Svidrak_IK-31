@@ -19,6 +19,6 @@ git checkout Lab1_1
 ```
 5. Зміни не відображаються, оскільки ми знаходимось в гілці master, а пушили ми в іншу гілку - Lab1_1
  ```shell script
-git log
+git logggggggggg
 ```
 
