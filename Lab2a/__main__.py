@@ -24,6 +24,13 @@ def how_to_write_logs():
     logger.warning("Це Warning повідомлення")
     logger.error("Це повідомлення про помилку")
 
+def ErrorFunc(num):
+    try:
+        a = 2 / num
+        logger.error("Програма виконалась")
+        return a
+    except Exception as ERROR:
+        logger.error("Помилка")
 
 if __name__ == '__main__':
     args = parser.parse_args()
@@ -32,3 +39,6 @@ if __name__ == '__main__':
     else:
         main(args.opt)
     print("test")
+    common.EvenOdd(True)
+    common.EvenOdd(False)
+    common.error(15,1)
