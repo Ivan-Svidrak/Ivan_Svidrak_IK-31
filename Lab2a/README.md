@@ -41,3 +41,27 @@ test
 test
 
 ```
+### 6) Створив функцію, яка буде виводить всі парні числа до 100 
+```shell
+def EvenOdd(bool):
+    for i in range(0,101):
+        if(bool and i % 2 == 0):
+            print(i)
+        elif(not bool and i % 2 != 0):
+            print(i)
+```
+### 7) Створив функцію яка може виконуватись з помилкою, в разі її винекнення ми зможено це побачити в логах
+```shell
+def error(x,y):
+    try:
+        a = x/y
+        log.info("Програма виконалась")
+        return a
+    except Exception as ERROR:
+        log.error("Помилка")
+```
+common.error(15,1)
+```shell
+2021-10-25 00:57:27,749 root INFO: Програма виконалась
+```
+### 8) Створив таблицю, та запустив пул-реквест
