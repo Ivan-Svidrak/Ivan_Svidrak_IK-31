@@ -202,3 +202,96 @@ deploy:
 ```
 
 #### 13. Закомітив зміни в Makefile до власного репозиторію.
+#### 14. Склонував ***git*** репозиторій на віртуальну машину Ubuntu. Перейшов у папку з  лабораторною роботою та запустив ***Makefile*** файл за допомогти команди `make`
+Результатом виконання цієї команди є створено ізольоване середовище, виконано тести, запущено програму та закомічено файл у git репозеторій.
+```text
+(Lab2) ivan@ivan-VirtualBox:~/PycharmProjects/pythonProject/Lab2$ make
+ 
+--------------------------------------------
+Installing pipenv and dependencies.
+--------------------------------------------
+ 
+sudo pip install pipenv
+Requirement already satisfied: pipenv in /usr/local/lib/python3.8/dist-packages (2021.5.29)
+Requirement already satisfied: certifi in /usr/lib/python3/dist-packages (from pipenv) (2019.11.28)
+Requirement already satisfied: pip>=18.0 in /usr/lib/python3/dist-packages (from pipenv) (20.0.2)
+Requirement already satisfied: virtualenv-clone>=0.2.5 in /usr/local/lib/python3.8/dist-packages (from pipenv) (0.5.7)
+Requirement already satisfied: setuptools>=36.2.1 in /usr/lib/python3/dist-packages (from pipenv) (45.2.0)
+Requirement already satisfied: virtualenv in /usr/local/lib/python3.8/dist-packages (from pipenv) (20.9.0)
+Requirement already satisfied: six<2,>=1.9.0 in /usr/lib/python3/dist-packages (from virtualenv->pipenv) (1.14.0)
+Requirement already satisfied: distlib<1,>=0.3.1 in /usr/local/lib/python3.8/dist-packages (from virtualenv->pipenv) (0.3.3)
+Requirement already satisfied: platformdirs<3,>=2 in /usr/local/lib/python3.8/dist-packages (from virtualenv->pipenv) (2.4.0)
+Requirement already satisfied: backports.entry-points-selectable>=1.0.4 in /usr/local/lib/python3.8/dist-packages (from virtualenv->pipenv) (1.1.0)
+Requirement already satisfied: filelock<4,>=3.2 in /usr/local/lib/python3.8/dist-packages (from virtualenv->pipenv) (3.3.2)
+sudo pipenv --python 3.8
+Virtualenv already exists!
+Removing existing virtualenv...
+Creating a virtualenv for this project...
+Pipfile: /home/ivan/PycharmProjects/pythonProject/Lab2/Pipfile
+Using /usr/bin/python3.8 (3.8.10) to create virtualenv...
+⠋ Creating virtual environment...created virtual environment CPython3.8.10.final.0-64 in 492ms
+  creator CPython3Posix(dest=/root/.local/share/virtualenvs/Lab2-uG5cU_bM, clear=False, no_vcs_ignore=False, global=False)
+  seeder FromAppData(download=False, pip=bundle, setuptools=bundle, wheel=bundle, via=copy, app_data_dir=/root/.local/share/virtualenv)
+    added seed packages: pip==21.3.1, setuptools==58.3.0, wheel==0.37.0
+  activators BashActivator,CShellActivator,FishActivator,NushellActivator,PowerShellActivator,PythonActivator
+
+✔ Successfully created virtual environment! 
+Virtualenv location: /root/.local/share/virtualenvs/Lab2-uG5cU_bM
+sudo pipenv install requests
+Installing requests...
+Adding requests to Pipfile's [packages]...
+✔ Installation Succeeded 
+Installing dependencies from Pipfile.lock (18d437)...
+  🐍   ▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉ 9/9 — 00:00:19
+To activate this project's virtualenv, run pipenv shell.
+Alternatively, run a command inside the virtualenv with pipenv run.
+sudo pipenv install ntplib
+Installing ntplib...
+Adding ntplib to Pipfile's [packages]...
+✔ Installation Succeeded 
+Installing dependencies from Pipfile.lock (18d437)...
+  🐍   ▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉ 0/0 — 00:00:00
+To activate this project's virtualenv, run pipenv shell.
+Alternatively, run a command inside the virtualenv with pipenv run.
+sudo pipenv install pytest
+Installing pytest...
+Adding pytest to Pipfile's [packages]...
+✔ Installation Succeeded 
+Installing dependencies from Pipfile.lock (18d437)...
+  🐍   ▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉ 0/0 — 00:00:00
+To activate this project's virtualenv, run pipenv shell.
+Alternatively, run a command inside the virtualenv with pipenv run.
+ 
+--------------------------------------------
+Start tests.
+--------------------------------------------
+ 
+sudo pipenv run pytest tests/tests.py > results.txt
+ 
+--------------------------------------------
+Run Python app.
+--------------------------------------------
+ 
+sudo pipenv run python3 app.py >> results.txt
+ 
+--------------------------------------------
+Adding and Committing results.txt to git.
+--------------------------------------------
+ 
+git add results.txt
+git commit -m "Automatic commit by MakeFile"
+[main 4ba16f2] Automatic commit by MakeFile
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+git push
+Username for 'https://github.com': Ivan-Svidrak
+Password for 'https://Ivan-Svidrak@github.com': 
+Enumerating objects: 19, виконано.
+Підрахунок об’єктів: 100% (19/19), виконано.
+Стиснення об’єктів: 100% (16/16), виконано.
+Запис об’єктів: 100% (16/16), 1.52 KiB | 258.00 KiB/s, виконано.
+Total 16 (delta 8), reused 0 (delta 0)
+remote: Resolving deltas: 100% (8/8), completed with 2 local objects.
+To https://github.com/Ivan-Svidrak/Ivan_Svidrak_IK-31.git
+   138a097..4ba16f2  main -> main
+
+```
