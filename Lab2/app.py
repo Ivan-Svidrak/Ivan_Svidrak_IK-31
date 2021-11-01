@@ -11,7 +11,6 @@ def get_time_if_url_not_work():
     date = {"date": d, "time": t}
     return date
 
-
 def check_time(d):
     if "time" in d.keys():
         print("Time is: ", d['time'])
@@ -20,7 +19,6 @@ def check_time(d):
     except KeyError:
         print("No date in response!!!")
         raise KeyError
-
 
 def main(url=''):
     if not url:
@@ -38,15 +36,17 @@ def main(url=''):
         check_time(get_time_if_url_not_work())
     return True
 
-
-def home_work():
-    # Ваш захист
-    pass
+def home_work(daytime=datetime.today().strftime("%H:%M %p")):
+    message = ""
+    if "AM" in daytime:
+        message = "Доброго дня"
+    elif "PM" in daytime:
+        message = "Доброї ночі"
+    return message
 
 
 def my_good_fun():
     return "success"
-
 
 if __name__ == "__main__":
     a = "=" * 40

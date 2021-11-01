@@ -109,3 +109,52 @@ Date is:  11-01-2021
 success
 (Lab2) ivan@ivan-VirtualBox:~/PycharmProjects/pythonProject/Lab2$ 
 ```
+#### 6. Встановив бібліотеку `pytest` за допомогою команди `sudo pipenv install pytest`. Для кращого розуміння ознайомився з документацією ***pytest***.
+#### 7. Створив папку ***tests***, в якій створив файли ***tests.py*** і ***__init__.py***. Скопіював код програми із репозиторію викладача до себе. Запускаю програму за допомогою команди `pytest tests/tests.py`
+Виконанння програми:
+```text
+((Lab2) ivan@ivan-VirtualBox:~/PycharmProjects/pythonProject/Lab2$ pytest tests/tests.py
+========================================================== test session starts ===========================================================
+platform linux -- Python 3.8.10, pytest-6.2.5, py-1.10.0, pluggy-1.0.0
+rootdir: /home/ivan/PycharmProjects/pythonProject/Lab2
+collected 5 items                                                                                                                        
+
+tests/tests.py .....                                                                                                               [100%]
+
+=========================================================== 5 passed in 0.92s ============================================================
+(Lab2) ivan@ivan-VirtualBox:~/PycharmProjects/pythonProject/Lab2$ 
+```
+#### 8. ❗ (Захист) У програмі дописав функцію яка буде перевіряти час доби AM/PM та відповідно друкувати: Доброго дня/ночі.
+Код програми:
+```python
+def home_work(daytime=datetime.today().strftime("%H:%M %p")):
+    message = ""
+    if "AM" in daytime:
+        message = "Доброго дня"
+    elif "PM" in daytime:
+        message = "Доброї ночі"
+    return message
+```
+#### 9. ❗ (Захист) Написав тест що буде перевіряти правильність виконання моєї функції.
+Код тесту:
+```python
+def test_home_work(self):
+        self.assertEqual(home_work("09:53 PM"), "Доброї ночі")
+        self.assertEqual(home_work("02:07 AM"), "Доброго дня")
+```
+Виконання тесту:
+```text
+(Lab2) ivan@ivan-VirtualBox:~/PycharmProjects/pythonProject/Lab2$ pytest tests/tests.py
+========================================================== test session starts ===========================================================
+platform linux -- Python 3.8.10, pytest-6.2.5, py-1.10.0, pluggy-1.0.0
+rootdir: /home/ivan/PycharmProjects/pythonProject/Lab2
+collected 5 items                                                                                                                        
+
+tests/tests.py .....                                                                                                               [100%]
+
+=========================================================== 5 passed in 0.82s ============================================================
+(Lab2) ivan@ivan-VirtualBox:~/PycharmProjects/pythonProject/Lab2$ 
+
+```
+#### 10. Перенаправляю результат виконання тестів у файл ***results.txt*** за допомогою команди `pytest tests/tests.py > results.txt`, а також додаю результат виконання програми у кінець цього ж файл за допомогою команди `python app.py >> results.txt`.
+#### 11. Зробив коміт із змінами до свого репозиторію.
