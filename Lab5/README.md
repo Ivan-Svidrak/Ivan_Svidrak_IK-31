@@ -144,11 +144,11 @@ test_app.py ....                                                         [100%]
 
 ```
 * Головна сторінка:
-![task_9](https://github.com/Ivan-Svidrak/Ivan_Svidrak_IK-31/tree/main/Lab5/img/1.png)
+![task_9](https://github.com/Ivan-Svidrak/Ivan_Svidrak_IK-31/blob/main/Lab5/img/1.jpg)
 * Сторінка hits:
-![task_9](https://github.com/Ivan-Svidrak/Ivan_Svidrak_IK-31/tree/main/Lab5/img/2.png)
+![task_9](https://github.com/Ivan-Svidrak/Ivan_Svidrak_IK-31/blob/main/Lab5/img/2.jpg)
 * Сторінка logs:
-![task_9](https://github.com/Ivan-Svidrak/Ivan_Svidrak_IK-31/tree/main/Lab5/img/3.png)
+![task_9](https://github.com/Ivan-Svidrak/Ivan_Svidrak_IK-31/blob/main/Lab5/img/3.jpg)
 #### 10. Зупинив проект натиснувши Ctrl+C та почистив всі ресурси `Docker` за допомогою `make`.
 
 #### 11. Створив директиву `docker-push` в Makefile для завантаження створених імеджів у мій Docker Hub репозиторій.
@@ -225,7 +225,7 @@ sudo docker-compose -p lab5 up
 
 
 #### 15. Перевірив чи працює веб-сайт. Дана сторінка відображається за адресою `http://172.20.0.2:5000/`:
-![task_15](https://github.com/Ivan-Svidrak/Ivan_Svidrak_IK-31/tree/main/Lab5/img/4.png)
+![task_15](https://github.com/Ivan-Svidrak/Ivan_Svidrak_IK-31/blob/main/Lab5/img/4.jpg)
 
 #### 16. Перевірив чи компоуз створив докер імеджі. Всі теги коректні і назва репозиторія вказана коректно:
 ```text
