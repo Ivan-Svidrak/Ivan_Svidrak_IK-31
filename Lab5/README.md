@@ -275,5 +275,5 @@ networks:
     driver: bridge
 ```
 Сайт працює 
-![task_20](https://github.com/Ivan-Svidrak/Ivan_Svidrak_IK-31/blob/main/Lab5/img/5.jpg)
+![task_20](https://github.com/Ivan-Svidrak/Ivan_Svidrak_IK-31/blob/main/Lab5/img/5.png)
 #### 21. Після успішного виконання роботи я відредагував свій `README.md` у цьому репозиторію та створив pull request.
